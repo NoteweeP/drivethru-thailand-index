@@ -1,169 +1,53 @@
 # DriveThruThailand Video Index
 
-A comprehensive index of videos from the DriveThruThailand YouTube channel, organized for easy access and discovery.
+## Latest Videos
 
-## 📍 By Region
+### EP221 Morning Drive in Bangkok | Ladprao Road-Expressway 1080p Dashcam
+- **URL:** https://youtu.be/lxzzL8Drbwc
+- **Duration:** 22:01
+- **Quality:** 1080p HD
+- **File Reference:** GX012049.MP4
 
-### Northern Thailand
-- Chiang Mai
-- Chiang Rai
-- Lamphun
-- Lampang
-- Mae Hong Son
-- Nan
-- Phayao
-- Phrae
-- Uttaradit
+#### Description
+Experience a morning drive through Bangkok, Thailand. Route includes Ladprao Road, along the expressway, and expressway toll payment.
 
-### Central Thailand
-- Bangkok
-- Nonthaburi
-- Pathum Thani
-- Ayutthaya
-- Lopburi
-- Ang Thong
-- Singburi
-- Chainat
-- Nakhon Nayok
-- Saraburi
+#### Available Languages
+- 🇹🇭 Thai: ขับรถเช้านี้ในกรุงเทพฯ | ถนนลาดพร้าว-ทางด่วน 1080p Dashcam
+- 🇬🇧 English: Morning Drive in Bangkok | Ladprao Road-Expressway 1080p Dashcam
+- 🇨🇳 Chinese: 曼谷清晨驾驶 | 拉披耶路-高速公路 1080p行车记录
+- 🇰🇷 Korean: 방콕 아침 드라이브 | 랏프라오 도로-고속도로 1080p 드라이브캠
+- 🇯🇵 Japanese: バンコク朝のドライブ | ラートプラオ通り-高速道路 1080pドライブレコーダー
 
-### Eastern Thailand
-- Chonburi
-- Rayong
-- Chanthaburi
-- Trat
-- Sa Kaeo
-- Prachinburi
-
-### Western Thailand
-- Kanchanaburi
-- Ratchaburi
-- Phetchaburi
-- Prachuap Khiri Khan
-
-### Southern Thailand
-- Chumphon
-- Ranong
-- Surat Thani
-- Phang Nga
-- Phuket
-- Krabi
-- Nakhon Si Thammarat
-- Trang
-- Phatthalung
-- Satun
-- Songkhla
-- Pattani
-- Yala
-- Narathiwat
-
-### Northeastern Thailand (Isaan)
-- Nakhon Ratchasima
-- Buriram
-- Surin
-- Sisaket
-- Ubon Ratchathani
-- Yasothon
-- Chaiyaphum
-- Amnat Charoen
-- Nong Bua Lamphu
-- Khon Kaen
-- Udon Thani
-- Loei
-- Nong Khai
-- Maha Sarakham
-- Roi Et
-- Kalasin
-- Sakon Nakhon
-- Nakhon Phanom
-- Mukdahan
-
-## 🗂 By Category
-
-### Food & Dining
-- Street Food
-- Local Restaurants
-- Markets
-- Food Tours
-
-### Travel & Transportation
+#### Categories
+- Urban Exploration
+- Travel & Transportation
 - Road Trips
-- Public Transport
-- Walking Tours
-- Scenic Drives
 
-### Culture & Lifestyle
-- Temples
-- Festivals
-- Local Life
-- Traditional Events
+## Organization
 
-### Nature & Outdoors
-- National Parks
-- Beaches
-- Mountains
-- Waterfalls
+### By Region
+- Bangkok
+  - Ladprao
+  - Expressways
+- [Other regions will be added]
 
-### Urban Exploration
-- City Tours
-- Shopping Areas
-- Hidden Spots
-- Neighborhoods
+### By Category
+- Urban Driving
+- Road Infrastructure
+- [Other categories will be added]
 
-## 📝 Video Entry Format
+## How to Use This Index
+1. Browse by region
+2. Search by category
+3. Use Ctrl+F to find specific locations or features
 
-```markdown
-### [Video Title](YouTube URL)
-- **Date:** YYYY-MM-DD
-- **Location:** Province, Specific Location
-- **Duration:** HH:MM:SS
-- **Categories:** [Category1, Category2]
-- **Description:** Brief description of the video content
-- **Highlights:** Key moments with timestamps
-- **Featured Places:**
-  * Place 1 (with coordinates if available)
-  * Place 2
-  * ...
-```
+## Contributing
+Feel free to contribute by:
+1. Adding new video entries
+2. Improving descriptions
+3. Adding timestamps for key locations
+4. Suggesting better organization methods
 
-## 🔍 How to Use This Index
-
-1. **Browse by Region**
-   - Click on the region name
-   - Find videos from specific provinces
-
-2. **Search by Category**
-   - Select a category of interest
-   - Find related videos across Thailand
-
-3. **Use the Search Function**
-   - Press Ctrl+F (or Cmd+F on Mac)
-   - Type keywords to find specific videos
-
-## 🗺️ Maps and Resources
-
-- Google Maps links to featured locations
-- Related blog posts or articles
-- Additional information about locations
-
-## 🤝 Contributing
-
-1. Fork this repository
-2. Add new video entries following the format
-3. Submit a pull request
-
-## 📌 Latest Updates
-
+## Updates
 - Last updated: 2024-11-30
-- Total videos indexed: 0
-
-## ℹ️ About DriveThruThailand
-
-Brief description about the channel and its content creator(s).
-
-## 📞 Contact
-
-For suggestions or corrections, please:
-1. Open an issue
-2. Submit a pull request
-3. Contact repository maintainers
+- Videos indexed: 1
