@@ -4,6 +4,7 @@ A comprehensive index of driving routes across Thailand, documenting various roa
 
 ## Latest Episode
 
+Link: https://youtu.be/ISqxo-O7DNA
 ### EP.223 - Phahonyothin Wang Noi to Saraburi
 - Route: Phahonyothin Road (Wang Noi) → Saraburi Bypass → Mittraphap Road (Kaeng Khoi)
 - Date: November 30, 2024
