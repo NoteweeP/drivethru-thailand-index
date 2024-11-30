@@ -1,39 +1,32 @@
-# Thailand Drive Through - Video Index
+# Drive Through Thailand Index
 
-Welcome to the Thailand Drive Through video series index. Experience Thailand's scenic routes through dashcam footage.
+A comprehensive index of driving routes across Thailand, documenting various road trips and travel experiences through dashcam recordings.
 
 ## Latest Episode
 
-### EP.222 - Phahonyothin Road: Bang Pa-in to Wangnoi
-- 🎥 [Watch on YouTube](https://www.youtube.com/watch?v=M98qMx27i2s)
-- 📍 Route: Phahonyothin Road
-- 🚩 From: Bang Pa-in
-- 🏁 To: Wangnoi
+### EP.223 - Phahonyothin Wang Noi to Saraburi
+- Route: Phahonyothin Road (Wang Noi) → Saraburi Bypass → Mittraphap Road (Kaeng Khoi)
+- Date: November 30, 2024
+- Quality: Full HD 1080p
 
-## Episodes List
+## Features
+- Multilingual support (Thai, English, Chinese, Korean, Japanese, Hindi)
+- Detailed route information
+- High-quality dashcam footage
+- Comprehensive route descriptions
 
-### Central Thailand
-- [EP.222](episodes/episode222.md) - Phahonyothin Road: Bang Pa-in to Wangnoi
+## Repository Structure
+- `main.md`: Main index file containing all episodes and routes
+- Individual episode folders with detailed information
 
-## Tags Index
-- #ThailandDriveThrough
-- #PhaHonYothin
-- #BangPaIn
-- #Wangnoi
-- #ThailandRoads
-- #DashcamThailand
-- #TravelThailand
+## Tags
+#DriveThruThailand #ThailandRoadTrip #DashcamThailand #ThailandTravel
 
-## Languages
-Titles and descriptions are available in:
-- Thai (ไทย)
-- English
-- Chinese (中文)
-- Korean (한국어)
-- Japanese (日本語)
+## Navigation
+For the complete index of all routes and episodes, please see [main.md](main.md)
 
 ## Contributing
-To suggest improvements or report issues, please create an issue or pull request.
+Feel free to suggest improvements or report issues through GitHub issues.
 
 ## License
-All content is licensed under [appropriate license].
+Content is available under the MIT License.
