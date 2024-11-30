@@ -3,7 +3,7 @@
 ## Latest Videos
 
 ### EP221 Morning Drive in Bangkok | Ladprao Road-Expressway 1080p Dashcam
-- **URL:** https://youtu.be/lxzzL8Drbwc
+- **URL:** https://youtu.be/IxzzL8Drbwc
 - **Duration:** 22:01
 - **Quality:** 1080p HD
 - **File Reference:** GX012049.MP4
