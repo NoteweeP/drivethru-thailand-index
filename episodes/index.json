@@ -1,6 +1,25 @@
 {
   "episodes": [
     {
+      "episodeNumber": "220",
+      "title": "Driving Through Dense Fog in Pak Chong | Temperature 23°C",
+      "url": "https://youtu.be/oWZcgK4-Ui0",
+      "date": "2024-11-30",
+      "quality": "4K",
+      "route": {
+        "start": "Pak Chong",
+        "end": "Khao Yai",
+        "type": "mountain"
+      },
+      "weather": "Dense fog, Temperature 23°C",
+      "description": "Saturday morning drive through dense fog on the way up to Khao Yai, featuring limited visibility conditions requiring careful driving",
+      "pointsOfInterest": [
+        "Dense fog conditions",
+        "Khao Yai mountain road",
+        "Cool morning temperature"
+      ]
+    },
+    {
       "episodeNumber": "221",
       "title": "Morning Drive in Bangkok | Ladprao Road-Expressway",
       "url": "https://youtu.be/IxzzL8Drbwc",
@@ -73,8 +92,11 @@
   ],
   "metadata": {
     "lastUpdated": "2024-12-01",
-    "totalEpisodes": 4,
-    "videoQuality": "Full HD 1080p",
+    "totalEpisodes": 5,
+    "videoQuality": [
+      "4K",
+      "Full HD 1080p"
+    ],
     "regions": [
       "Bangkok",
       "Ayutthaya",
