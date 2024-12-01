@@ -11,6 +11,7 @@
         "end": "Khao Yai",
         "type": "mountain"
       },
+      "province": "Nakhon Ratchasima",
       "weather": "Dense fog, Temperature 23°C",
       "description": "Saturday morning drive through dense fog on the way up to Khao Yai, featuring limited visibility conditions requiring careful driving",
       "pointsOfInterest": [
@@ -31,6 +32,7 @@
         "end": "Expressway toll stations",
         "type": "urban"
       },
+      "province": "Bangkok",
       "weather": "Morning conditions",
       "description": "A morning drive through Bangkok, featuring Ladprao Road and expressway routes with toll payment stations"
     },
@@ -48,6 +50,7 @@
         "road": "Highway 2 (Mittraphap Road)",
         "type": "scenic"
       },
+      "provinces": ["Saraburi", "Nakhon Ratchasima"],
       "weather": "Clear sky, good visibility",
       "pointsOfInterest": [
         "Muak Lek District views",
@@ -70,6 +73,7 @@
         "end": "Mittraphap Road, Kaeng Khoi",
         "type": "highway"
       },
+      "provinces": ["Ayutthaya", "Saraburi"],
       "weather": "Clear Sky",
       "description": "A drive along the major highway route connecting Bangkok's outer ring to Saraburi province"
     },
@@ -86,6 +90,7 @@
         "road": "Phahonyothin Road",
         "type": "highway"
       },
+      "province": "Ayutthaya",
       "weather": "Clear Sky",
       "description": "Journey through the industrial corridor of Ayutthaya province"
     }
@@ -98,6 +103,12 @@
       "Full HD 1080p"
     ],
     "regions": [
+      "Bangkok",
+      "Ayutthaya",
+      "Saraburi",
+      "Nakhon Ratchasima"
+    ],
+    "provinces": [
       "Bangkok",
       "Ayutthaya",
       "Saraburi",
