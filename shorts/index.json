@@ -1,0 +1,20 @@
+{
+  "shorts": [
+    {
+      "title": "Amazing Sunset at Bangsan Beach",
+      "description": "Quick evening drive capturing the beautiful sunset at Bangsan Beach",
+      "date": "2024-01-20",
+      "url": "https://youtube.com/shorts/example1",
+      "location": "Bangsan Beach, Chonburi",
+      "duration": "0:59"
+    },
+    {
+      "title": "Temple Run: Wat Mahathat",
+      "description": "Quick guide around the famous Buddha head in tree roots at Wat Mahathat",
+      "date": "2024-02-05",
+      "url": "https://youtube.com/shorts/example2",
+      "location": "Wat Mahathat, Ayutthaya",
+      "duration": "0:45"
+    }
+  ]
+}
