@@ -1,16 +1,23 @@
 // provinces.js
 const provinces = {
-    init: function() {
-        this.loadProvinces();
+    init: async function() {
+        console.log('Initializing provinces module...');
+        await this.loadProvinces();
         this.setupFilters();
     },
 
     loadProvinces: async function() {
-        const episodes = await this.getVideoData();
-        const groupedVideos = this.groupByProvince(episodes);
-        this.renderProvinces(groupedVideos);
-        this.updateStats(groupedVideos);
-        this.createProvinceFilters(Object.keys(groupedVideos));
+        try {
+            const episodes = await this.getVideoData();
+            console.log('Loaded episodes:', episodes);
+            const groupedVideos = this.groupByProvince(episodes);
+            console.log('Grouped videos:', groupedVideos);
+            this.renderProvinces(groupedVideos);
+            this.updateStats(groupedVideos);
+            this.createProvinceFilters(Object.keys(groupedVideos));
+        } catch (error) {
+            console.error('Error loading provinces:', error);
+        }
     },
 
     groupByProvince: function(episodes) {
@@ -31,7 +38,10 @@ const provinces = {
 
     renderProvinces: function(groupedVideos) {
         const grid = document.getElementById('provinces-grid');
-        if (!grid) return;
+        if (!grid) {
+            console.error('Provinces grid not found');
+            return;
+        }
 
         grid.innerHTML = ''; // Clear existing content
         
@@ -46,6 +56,11 @@ const provinces = {
 
     createProvinceSection: function(province, videos) {
         const template = document.getElementById('province-section-template');
+        if (!template) {
+            console.error('Province section template not found');
+            return document.createElement('div');
+        }
+
         const section = template.content.cloneNode(true);
         
         const title = section.querySelector('h4');
@@ -65,6 +80,11 @@ const provinces = {
 
     createVideoCard: function(video) {
         const template = document.getElementById('video-card-template');
+        if (!template) {
+            console.error('Video card template not found');
+            return document.createElement('div');
+        }
+
         const card = template.content.cloneNode(true);
         
         const link = card.querySelector('a');
@@ -72,7 +92,7 @@ const provinces = {
         
         // Create thumbnail URL based on video URL
         const videoId = this.getVideoId(video.url);
-        const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+        const thumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : '';
         
         const img = card.querySelector('img');
         img.src = thumbnail;
@@ -81,13 +101,16 @@ const provinces = {
         const title = card.querySelector('h5');
         title.textContent = video.title;
         
-        const date = card.querySelector('p');
-        date.textContent = new Date(video.date).toLocaleDateString();
+        const dateElem = card.querySelector('p');
+        if (video.date) {
+            dateElem.textContent = new Date(video.date).toLocaleDateString();
+        }
         
         return card.firstElementChild;
     },
 
     getVideoId: function(url) {
+        if (!url) return null;
         const regex = /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?]+)/;
         const matches = url.match(regex);
         return matches && matches[1];
@@ -158,16 +181,23 @@ const provinces = {
 
     getVideoData: async function() {
         try {
-            const response = await fetch('/episodes/index.json');
+            // Using relative path and catching 404s
+            const response = await fetch('../episodes/index.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             const data = await response.json();
             return data.episodes;
         } catch (error) {
             console.error('Error loading video data:', error);
+            // Return empty array if file not found or other error
             return [];
         }
     }
 };
 
+// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing provinces module...');
     provinces.init();
 });
