@@ -4,14 +4,14 @@ A comprehensive index of driving routes across Thailand, documenting various roa
 
 ## Latest Episode
 
-Link: https://www.youtube.com/watch?v=rQEw6jDxmk8
-### EP.224 - Muak Lek to Pak Chong Scenic Route
-- Route: Muak Lek → Klang Dong → Pak Chong
+Link: https://www.youtube.com/watch?v=IxzzL8Drbwc
+### EP221 - Morning Drive in Bangkok | Ladprao Road-Expressway
+- Route: Ladprao Road → Expressway
 - Date: November 30, 2024
 - Quality: Full HD 1080p
 
 ## Features
-- Multilingual support (Thai, English, Chinese, Korean, Japanese, Hindi)
+- Multilingual support (Thai, English, Chinese, Korean, Japanese)
 - Detailed route information
 - High-quality dashcam footage
 - Comprehensive route descriptions
