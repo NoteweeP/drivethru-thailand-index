@@ -1,21 +1,29 @@
 // Main functionality for DriveThru Thailand Index
+console.log('Loading main.js');
 
 // Fetch and display content
 async function fetchContent() {
     try {
+        console.log('Fetching content...');
         // Fetch episodes
-        const episodesResponse = await fetch('episodes/index.json');
+        const episodesResponse = await fetch('./episodes/index.json');
         const episodesData = await episodesResponse.json();
+        console.log('Episodes data:', episodesData);
         displayFeatured(episodesData.episodes[0]);
         displayEpisodes(episodesData.episodes);
         document.getElementById('episode-count').textContent = episodesData.episodes.length;
         document.getElementById('province-count').textContent = episodesData.metadata.regions.length;
 
         // Fetch shorts
-        const shortsResponse = await fetch('shorts/index.json');
+        const shortsResponse = await fetch('./shorts/index.json');
         const shortsData = await shortsResponse.json();
+        console.log('Shorts data:', shortsData);
         displayShorts(shortsData.shorts);
         document.getElementById('shorts-count').textContent = shortsData.shorts.length;
+
+        // Initialize search and filters
+        initializeSearch();
+        initializeFilters();
     } catch (error) {
         console.error('Error fetching content:', error);
     }
@@ -130,5 +138,8 @@ function displayShorts(shorts) {
     `).join('');
 }
 
-// Initialize
-document.addEventListener('DOMContentLoaded', fetchContent);
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing...');
+    fetchContent();
+});
