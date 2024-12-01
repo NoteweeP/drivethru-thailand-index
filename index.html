@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveThru Thailand - Video Index</title>
+    <meta name="description" content="Comprehensive index of DriveThru Thailand YouTube channel videos, organized by locations and categories">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <h1 class="text-xl font-bold text-gray-800">DriveThru Thailand</h1>
+                <div class="flex space-x-4">
+                    <a href="#episodes" class="text-gray-600 hover:text-blue-500">Episodes</a>
+                    <a href="#shorts" class="text-gray-600 hover:text-blue-500">Shorts</a>
+                    <a href="insights.html" class="text-gray-600 hover:text-blue-500">Insights</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-blue-600 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">Explore Thailand's Roads</h2>
+            <p class="text-xl opacity-90">Your comprehensive guide to scenic routes and driving experiences</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- Search Section -->
+        <div class="mb-12">
+            <div class="relative max-w-2xl mx-auto">
+                <input type="text" id="search" 
+                    placeholder="Search episodes, routes, or locations..." 
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                <i class="fas fa-search absolute right-4 top-4 text-gray-400"></i>
+            </div>
+        </div>
+
+        <!-- Latest Episodes -->
+        <section id="episodes" class="mb-12">
+            <h3 class="text-2xl font-bold mb-6">Latest Episodes</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="episodes-grid">
+                <!-- Episodes will be populated via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Recent Shorts -->
+        <section id="shorts" class="mb-12">
+            <h3 class="text-2xl font-bold mb-6">Recent Shorts</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="shorts-grid">
+                <!-- Shorts will be populated via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white rounded-lg shadow p-6 text-center">
+                <h4 class="text-xl font-bold text-blue-600 mb-2">Episodes</h4>
+                <p class="text-3xl font-bold" id="episode-count">0</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6 text-center">
+                <h4 class="text-xl font-bold text-blue-600 mb-2">Shorts</h4>
+                <p class="text-3xl font-bold" id="shorts-count">0</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6 text-center">
+                <h4 class="text-xl font-bold text-blue-600 mb-2">Provinces</h4>
+                <p class="text-3xl font-bold">15+</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">About DriveThru Thailand</h4>
+                    <p class="text-gray-400">Exploring Thailand's beautiful routes and destinations through immersive driving videos.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#episodes" class="text-gray-400 hover:text-white">Episodes</a></li>
+                        <li><a href="#shorts" class="text-gray-400 hover:text-white">Shorts</a></li>
+                        <li><a href="insights.html" class="text-gray-400 hover:text-white">Insights</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2024 DriveThru Thailand. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fetch and display episodes and shorts
+        async function fetchContent() {
+            try {
+                // Fetch episodes
+                const episodesResponse = await fetch('episodes/index.json');
+                const episodesData = await episodesResponse.json();
+                displayEpisodes(episodesData.episodes);
+                document.getElementById('episode-count').textContent = episodesData.episodes.length;
+
+                // Fetch shorts
+                const shortsResponse = await fetch('shorts/index.json');
+                const shortsData = await shortsResponse.json();
+                displayShorts(shortsData.shorts);
+                document.getElementById('shorts-count').textContent = shortsData.shorts.length;
+            } catch (error) {
+                console.error('Error fetching content:', error);
+            }
+        }
+
+        function displayEpisodes(episodes) {
+            const grid = document.getElementById('episodes-grid');
+            grid.innerHTML = episodes.map(episode => `
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">${episode.title}</h4>
+                        <p class="text-gray-600 mb-4">${episode.description}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">${episode.date}</span>
+                            <a href="${episode.url}" target="_blank" rel="noopener noreferrer" 
+                               class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                                Watch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function displayShorts(shorts) {
+            const grid = document.getElementById('shorts-grid');
+            grid.innerHTML = shorts.map(short => `
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">${short.title}</h4>
+                        <p class="text-gray-600 mb-4">${short.description}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">${short.date}</span>
+                            <a href="${short.url}" target="_blank" rel="noopener noreferrer"
+                               class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                                Watch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Search functionality
+        document.getElementById('search').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const episodes = document.querySelectorAll('#episodes-grid > div');
+            const shorts = document.querySelectorAll('#shorts-grid > div');
+
+            [...episodes, ...shorts].forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(searchTerm) ? '' : 'none';
+            });
+        });
+
+        // Initialize
+        fetchContent();
+    </script>
+</body>
+</html>
