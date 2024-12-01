@@ -73,3 +73,62 @@ function displayFeatured(episode) {
         </div>
     `;
 }
+
+// Display episodes grid
+function displayEpisodes(episodes) {
+    const grid = document.getElementById('episodes-grid');
+    grid.innerHTML = episodes.map(episode => `
+        <div class="bg-white rounded-lg shadow overflow-hidden" data-type="${episode.route?.type?.toLowerCase() || 'all'}">
+            <div class="p-6">
+                <div class="flex items-center mb-2">
+                    <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-sm">EP.${episode.episodeNumber}</span>
+                    ${episode.quality ? `
+                    <span class="ml-2 bg-green-100 text-green-600 px-2 py-1 rounded text-sm">
+                        <i class="fas fa-video mr-1"></i>${episode.quality}
+                    </span>` : ''}
+                </div>
+                <h4 class="text-xl font-bold mb-2">${episode.title}</h4>
+                <p class="text-gray-600 mb-4">
+                    <i class="fas fa-route mr-2"></i>
+                    ${episode.route ? `${episode.route.start} → ${episode.route.end}` : ''}
+                </p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">
+                        <i class="far fa-calendar mr-1"></i>${episode.date || ''}
+                    </span>
+                    <a href="${episode.url}" target="_blank" rel="noopener noreferrer" 
+                       class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                       <i class="fab fa-youtube mr-1"></i>Watch
+                    </a>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Display shorts grid
+function displayShorts(shorts) {
+    const grid = document.getElementById('shorts-grid');
+    grid.innerHTML = shorts.map(short => `
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+            <div class="p-6">
+                <h4 class="text-xl font-bold mb-2">${short.title}</h4>
+                <p class="text-gray-600 mb-4">
+                    <i class="fas fa-map-marker-alt mr-2"></i>${short.location || ''}
+                </p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">
+                        <i class="far fa-calendar mr-1"></i>${short.date || ''}
+                    </span>
+                    <a href="${short.url}" target="_blank" rel="noopener noreferrer"
+                       class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                       <i class="fab fa-youtube mr-1"></i>Watch
+                    </a>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', fetchContent);
