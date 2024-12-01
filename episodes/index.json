@@ -1,6 +1,24 @@
 {
   "episodes": [
     {
+      "episodeNumber": "225",
+      "title": "Khok Kruat Railway Station",
+      "date": "2024-12-01",
+      "quality": "4K",
+      "location": {
+        "station": "Khok Kruat Railway Station",
+        "province": "Nakhon Ratchasima",
+        "type": "railway"
+      },
+      "weather": "Clear sky",
+      "description": "A drive past the historic Khok Kruat Railway Station, featuring traditional wooden architecture on the Northeastern railway line.",
+      "pointsOfInterest": [
+        "Traditional wooden station building",
+        "Well-preserved architectural details",
+        "Beautiful station surroundings"
+      ]
+    },
+    {
       "episodeNumber": "220",
       "title": "Driving Through Dense Fog in Pak Chong | Temperature 23°C",
       "url": "https://youtu.be/oWZcgK4-Ui0",
@@ -97,7 +115,7 @@
   ],
   "metadata": {
     "lastUpdated": "2024-12-01",
-    "totalEpisodes": 5,
+    "totalEpisodes": 6,
     "videoQuality": [
       "4K",
       "Full HD 1080p"
