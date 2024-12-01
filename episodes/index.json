@@ -1,6 +1,21 @@
 {
   "episodes": [
     {
+      "episodeNumber": "221",
+      "title": "Morning Drive in Bangkok | Ladprao Road-Expressway",
+      "url": "https://youtu.be/IxzzL8Drbwc",
+      "date": "2024-12-01",
+      "quality": "Full HD 1080p",
+      "route": {
+        "start": "Ladprao Road",
+        "via": ["Expressway"],
+        "end": "Expressway toll stations",
+        "type": "urban"
+      },
+      "weather": "Morning conditions",
+      "description": "A morning drive through Bangkok, featuring Ladprao Road and expressway routes with toll payment stations"
+    },
+    {
       "episodeNumber": "224",
       "title": "Muak Lek to Pak Chong Scenic Route",
       "url": "https://www.youtube.com/watch?v=rQEw6jDxmk8",
@@ -55,10 +70,10 @@
       "weather": "Clear Sky",
       "description": "Journey through the industrial corridor of Ayutthaya province"
     }
-    
+  ],
   "metadata": {
-    "lastUpdated": "2024-11-30",
-    "totalEpisodes": 3,
+    "lastUpdated": "2024-12-01",
+    "totalEpisodes": 4,
     "videoQuality": "Full HD 1080p",
     "regions": [
       "Bangkok",
@@ -67,4 +82,4 @@
       "Nakhon Ratchasima"
     ]
   }
-
+}
