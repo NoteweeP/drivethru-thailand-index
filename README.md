@@ -4,7 +4,7 @@ A comprehensive index of driving routes across Thailand, documenting various roa
 
 ## Latest Episode
 
-Link: [To be updated]
+Link: https://www.youtube.com/watch?v=rQEw6jDxmk8
 ### EP.224 - Muak Lek to Pak Chong Scenic Route
 - Route: Muak Lek → Klang Dong → Pak Chong
 - Date: November 30, 2024
