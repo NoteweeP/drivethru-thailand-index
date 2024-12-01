@@ -21,7 +21,7 @@
         "Klang Dong local area",
         "Pak Chong entrance"
       ],
-      "description": "A scenic drive through the mountainous region between Saraburi and Nakhon Ratchasima provinces"
+      "title_en": "Muak Lek - Klang Dong - Pak Chong Scenic Drive | Thailand Dashcam EP.224"
     },
     {
       "episodeNumber": "223",
@@ -37,45 +37,43 @@
         "type": "highway"
       },
       "weather": "Clear Sky",
-      "description": "Highway drive from Wang Noi through Saraburi Bypass to Kaeng Khoi junction"
+      "title_en": "Driving from Phahonyothin Road Wang Noi to Saraburi Bypass - Kaeng Khoi, Saraburi"
     },
     {
       "episodeNumber": "222",
       "title": "Phahonyothin Road: Bang Pa-in to Wangnoi",
       "url": "https://www.youtube.com/watch?v=M98qMx27i2s",
-      "date": "2024-11-29",
-      "time": "08:00 AM",
-      "quality": "Full HD 1080p",
       "route": {
         "road": "Phahonyothin Road",
         "start": "Bang Pa-in",
         "end": "Wangnoi",
         "type": "highway"
       },
-      "weather": "Clear Sky",
-      "description": "Morning drive along Phahonyothin Road from Bang Pa-in intersection to Wangnoi district"
+      "title_en": "Phahonyothin Road: Bang Pa-in to Wangnoi"
     },
     {
       "episodeNumber": "221",
-      "title": "Bangkok to Ayutthaya via Highway 347",
-      "url": "https://www.youtube.com/watch?v=sample221",
-      "date": "2024-11-28",
-      "time": "07:30 AM",
+      "title": "Bangkok to Bang Pa-in Expressway Drive",
+      "url": "https://youtu.be/K6CYzVHe80Y",
+      "date": "2024-11-29",
+      "time": "08:30 AM",
       "quality": "Full HD 1080p",
       "route": {
-        "road": "Highway 347",
-        "start": "Bangkok",
-        "end": "Ayutthaya",
-        "type": "scenic"
+        "start": "Bangkok (Bang Sue)",
+        "via": ["Don Mueang Tollway", "Bangpa-in Expressway"],
+        "end": "Bang Pa-in, Ayutthaya",
+        "type": "highway",
+        "distance": "76 km"
       },
-      "weather": "Partly Cloudy",
+      "weather": "Clear sky, good visibility",
       "pointsOfInterest": [
-        "Bangkok outskirts scenery",
-        "Rural Thailand views",
-        "Ayutthaya approach",
-        "Historical park vicinity"
+        "Don Mueang International Airport view",
+        "Rangsit area",
+        "Elevated expressway sections",
+        "Bang Pa-in Industrial Estate",
+        "Bang Pa-in Junction"
       ],
-      "description": "Scenic alternative route from Bangkok to Ayutthaya via the less traveled Highway 347"
+      "title_en": "Bangkok to Bang Pa-in Expressway Drive | Thailand Dashcam EP.221"
     }
   ],
   "metadata": {
@@ -83,13 +81,10 @@
     "totalEpisodes": 4,
     "videoQuality": "Full HD 1080p",
     "regions": [
-      "Saraburi",
-      "Nakhon Ratchasima",
-      "Bang Pa-in",
-      "Wangnoi",
-      "Kaeng Khoi",
       "Bangkok",
-      "Ayutthaya"
+      "Ayutthaya",
+      "Saraburi",
+      "Nakhon Ratchasima"
     ]
   }
 }
