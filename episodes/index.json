@@ -43,7 +43,7 @@
       "episodeNumber": "222",
       "title": "Phahonyothin Road: Bang Pa-in to Wangnoi",
       "url": "https://www.youtube.com/watch?v=M98qMx27i2s",
-      "date": "2024-11-29",
+      "date": "2024-11-30",
       "time": "08:30 AM",
       "quality": "Full HD 1080p",
       "route": {
@@ -55,34 +55,10 @@
       "weather": "Clear Sky",
       "description": "Journey through the industrial corridor of Ayutthaya province"
     },
-    {
-      "episodeNumber": "221",
-      "title": "Bangkok to Ayutthaya Historical Route",
-      "url": "https://www.youtube.com/watch?v=sample221",
-      "date": "2024-11-28",
-      "time": "07:30 AM",
-      "quality": "Full HD 1080p",
-      "route": {
-        "start": "Bangkok (Din Daeng)",
-        "via": ["Rangsit", "Thammasat University"],
-        "end": "Ayutthaya Historical Park",
-        "road": "Phahonyothin Road",
-        "type": "urban"
-      },
-      "weather": "Partly cloudy",
-      "pointsOfInterest": [
-        "Din Daeng Intersection",
-        "Don Mueang Airport",
-        "Rangsit Market",
-        "Thammasat University",
-        "Ayutthaya Historical Park entrance"
-      ],
-      "description": "A journey from modern Bangkok to the ancient capital of Ayutthaya, passing through urban and historical landscapes"
-    }
-  ],
+    
   "metadata": {
     "lastUpdated": "2024-11-30",
-    "totalEpisodes": 4,
+    "totalEpisodes": 3,
     "videoQuality": "Full HD 1080p",
     "regions": [
       "Bangkok",
