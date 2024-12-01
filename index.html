@@ -12,52 +12,41 @@
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="language" content="Thai">
     <meta name="author" content="DriveThruThailand">
-    <meta name="revisit-after" content="7 days">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://noteweeP.github.io/drivethru-thailand-index/">
-    <meta property="og:title" content="DriveThruThailand - ขับรถเที่ยวทั่วไทย | Video Index">
-    <meta property="og:description" content="รวมเส้นทางขับรถเที่ยวทั่วไทย พร้อมวิดีโอแนะนำเส้นทาง ทั้งมอเตอร์เวย์ ถนนหลวง และเส้นทางท่องเที่ยว">
-    <meta property="og:image" content="https://noteweeP.github.io/drivethru-thailand-index/assets/cover.jpg">
-    <meta property="og:locale" content="th_TH">
-    <meta property="og:locale:alternate" content="en_US">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://noteweeP.github.io/drivethru-thailand-index/">
-    <meta property="twitter:title" content="DriveThruThailand - ขับรถเที่ยวทั่วไทย | Video Index">
-    <meta property="twitter:description" content="รวมเส้นทางขับรถเที่ยวทั่วไทย พร้อมวิดีโอแนะนำเส้นทาง ทั้งมอเตอร์เวย์ ถนนหลวง และเส้นทางท่องเที่ยว">
-    <meta property="twitter:image" content="https://noteweeP.github.io/drivethru-thailand-index/assets/cover.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://noteweeP.github.io/drivethru-thailand-index/">
-
+    <!-- Tailwind CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    
-    <!-- Enhanced Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "DriveThruThailand",
-      "alternateName": "ขับรถเที่ยวทั่วไทย",
-      "description": "รวมเส้นทางขับรถเที่ยวทั่วไทย พร้อมวิดีโอแนะนำเส้นทาง",
-      "url": "https://noteweeP.github.io/drivethru-thailand-index/",
-      "inLanguage": ["th-TH", "en-US"],
-      "publisher": {
-        "@type": "Organization",
-        "name": "DriveThruThailand",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://noteweeP.github.io/drivethru-thailand-index/assets/logo.png"
+
+    <!-- Custom Styles -->
+    <style>
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
         }
-      }
-    }
-    </script>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .error-message {
+            background-color: #fee2e2;
+            border: 1px solid #ef4444;
+            color: #dc2626;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+        .img-fallback {
+            background-color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
     <nav class="bg-white shadow-lg">
@@ -65,7 +54,7 @@
             <div class="flex justify-between">
                 <div class="flex space-x-7">
                     <div>
-                        <a href="#" class="flex items-center py-4">
+                        <a href="index.html" class="flex items-center py-4">
                             <span class="font-semibold text-gray-800 text-lg">DriveThruThailand</span>
                         </a>
                     </div>
@@ -83,6 +72,8 @@
         <!-- Episodes Section -->
         <section class="mb-12">
             <h2 class="text-2xl font-semibold text-gray-700 mb-6">Episodes</h2>
+            <div id="episodes-loading" class="loading-spinner"></div>
+            <div id="episodes-error" class="error-message hidden"></div>
             <div id="episodes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Episodes will be dynamically loaded here -->
             </div>
@@ -91,6 +82,8 @@
         <!-- Shorts Section -->
         <section>
             <h2 class="text-2xl font-semibold text-gray-700 mb-6">Shorts</h2>
+            <div id="shorts-loading" class="loading-spinner"></div>
+            <div id="shorts-error" class="error-message hidden"></div>
             <div id="shorts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Shorts will be dynamically loaded here -->
             </div>
@@ -104,28 +97,60 @@
     </footer>
 
     <script>
+        // Function to show/hide loading spinner
+        function toggleLoading(sectionId, show) {
+            document.getElementById(`${sectionId}-loading`).style.display = show ? 'block' : 'none';
+        }
+
+        // Function to show/hide error message
+        function toggleError(sectionId, show, message = '') {
+            const errorElement = document.getElementById(`${sectionId}-error`);
+            errorElement.style.display = show ? 'block' : 'none';
+            if (show) {
+                errorElement.textContent = message;
+            }
+        }
+
+        // Function to handle image loading errors
+        function handleImageError(img) {
+            const fallback = document.createElement('div');
+            fallback.className = 'img-fallback';
+            fallback.innerHTML = '<span class="text-gray-500">Image not available</span>';
+            img.parentNode.replaceChild(fallback, img);
+        }
+
         // Function to fetch and load video data
         async function loadVideos() {
-            try {
-                // Load episodes
-                const episodesResponse = await fetch('episodes/index.json');
-                const episodesData = await episodesResponse.json();
-                const episodesContainer = document.getElementById('episodes');
-                episodesData.forEach(video => {
-                    const card = createVideoCard(video);
-                    episodesContainer.appendChild(card);
-                });
+            // Load episodes
+            await loadSection('episodes');
+            // Load shorts
+            await loadSection('shorts');
+        }
 
-                // Load shorts
-                const shortsResponse = await fetch('shorts/index.json');
-                const shortsData = await shortsResponse.json();
-                const shortsContainer = document.getElementById('shorts');
-                shortsData.forEach(video => {
+        // Function to load a specific section
+        async function loadSection(section) {
+            toggleLoading(section, true);
+            toggleError(section, false);
+            
+            try {
+                const response = await fetch(`${section}/index.json`);
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${section} data`);
+                }
+                
+                const data = await response.json();
+                const container = document.getElementById(section);
+                container.innerHTML = ''; // Clear any existing content
+                
+                data[section].forEach(video => {
                     const card = createVideoCard(video);
-                    shortsContainer.appendChild(card);
+                    container.appendChild(card);
                 });
             } catch (error) {
-                console.error('Error loading videos:', error);
+                console.error(`Error loading ${section}:`, error);
+                toggleError(section, true, `Failed to load ${section}. Please try again later.`);
+            } finally {
+                toggleLoading(section, false);
             }
         }
 
@@ -133,15 +158,22 @@
         function createVideoCard(video) {
             const card = document.createElement('div');
             card.className = 'bg-white rounded-lg shadow-md overflow-hidden';
-            card.innerHTML = `
+            
+            const content = `
                 <a href="${video.url}" target="_blank" rel="noopener noreferrer">
-                    <img src="${video.thumbnail}" alt="${video.title}" class="w-full h-48 object-cover">
+                    <img src="${video.thumbnail}" 
+                         alt="${video.title}" 
+                         class="w-full h-48 object-cover"
+                         onerror="handleImageError(this)">
                     <div class="p-4">
                         <h3 class="font-semibold text-lg mb-2">${video.title}</h3>
                         <p class="text-gray-600 text-sm">${video.description}</p>
+                        <p class="text-gray-500 text-xs mt-2">${new Date(video.date).toLocaleDateString()}</p>
                     </div>
                 </a>
             `;
+            
+            card.innerHTML = content;
             return card;
         }
 
