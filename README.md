@@ -17,7 +17,6 @@ Link: https://www.youtube.com/watch?v=rQEw6jDxmk8
 - Comprehensive route descriptions
 
 ## Repository Structure
-- `main.md`: Main index file containing all episodes and routes
 - Individual episode folders with detailed information
 
 ## Tags
