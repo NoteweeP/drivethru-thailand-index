@@ -46,11 +46,15 @@
                     class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                 <i class="fas fa-search absolute right-4 top-4 text-gray-400"></i>
             </div>
-            <div class="flex flex-wrap justify-center gap-2" id="filters">
+            <div class="flex flex-wrap justify-center gap-2 mb-4" id="filters">
                 <button class="px-4 py-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 filter-btn active" data-filter="all">All Routes</button>
                 <button class="px-4 py-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 filter-btn" data-filter="highway">Highways</button>
                 <button class="px-4 py-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 filter-btn" data-filter="scenic">Scenic Routes</button>
                 <button class="px-4 py-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 filter-btn" data-filter="urban">Urban Routes</button>
+            </div>
+            <!-- Province Filter -->
+            <div class="flex flex-wrap justify-center gap-2" id="province-filters">
+                <!-- Province filter buttons will be added dynamically -->
             </div>
         </div>
 
@@ -69,6 +73,41 @@
             <h3 class="text-2xl font-bold mb-6">Recent Shorts</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="shorts-grid"></div>
         </section>
+
+        <!-- Provinces -->
+        <section id="provinces" class="mb-12">
+            <h3 class="text-2xl font-bold mb-6">Browse by Province</h3>
+            <div class="grid grid-cols-1 gap-8" id="provinces-grid">
+                <!-- Province sections will be populated dynamically -->
+            </div>
+        </section>
+
+        <!-- Province Templates (Hidden) -->
+        <template id="province-section-template">
+            <div class="province-section bg-white rounded-lg shadow-lg p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <h4 class="text-xl font-bold text-gray-800"></h4>
+                    <span class="text-sm text-gray-500"></span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 videos-grid">
+                </div>
+            </div>
+        </template>
+
+        <template id="video-card-template">
+            <div class="video-card bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+                <a href="#" class="block">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+                        <img src="" alt="" class="object-cover w-full h-full">
+                    </div>
+                    <div class="p-4">
+                        <h5 class="font-medium text-gray-900 truncate"></h5>
+                        <p class="text-sm text-gray-500 mt-1"></p>
+                        <p class="text-sm text-gray-600 mt-1"></p>
+                    </div>
+                </a>
+            </div>
+        </template>
 
         <!-- Stats -->
         <section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
