@@ -11,7 +11,8 @@
         "start": "Muak Lek, Saraburi",
         "via": ["Klang Dong"],
         "end": "Pak Chong, Nakhon Ratchasima",
-        "road": "Highway 2 (Mittraphap Road)"
+        "road": "Highway 2 (Mittraphap Road)",
+        "type": "scenic"
       },
       "weather": "Clear sky, good visibility",
       "pointsOfInterest": [
@@ -20,14 +21,7 @@
         "Klang Dong local area",
         "Pak Chong entrance"
       ],
-      "titles": {
-        "en": "Muak Lek - Klang Dong - Pak Chong Scenic Drive | Thailand Dashcam EP.224",
-        "th": "นั่งรถเที่ยว มวกเหล็ก-กลางดง-ปากช่อง | Thailand Dashcam EP.224",
-        "zh": "泰国风景路线：Muak Lek-Klang Dong-Pak Chong | 泰国行车记录 EP.224",
-        "ko": "무악렉-클랑동-팍총 드라이브 코스 | 태국 드라이브 EP.224",
-        "ja": "ムアクレック-クランドン-パクチョン絶景ドライブ | タイ・ドライブ EP.224",
-        "hi": "मुआक लेक - क्लांग डोंग - पाक चोंग सड़क यात्रा | थाईलैंड डैशकैम EP.224"
-      }
+      "description": "A scenic drive through the mountainous region between Saraburi and Nakhon Ratchasima provinces"
     },
     {
       "episodeNumber": "223",
@@ -39,47 +33,63 @@
       "route": {
         "start": "Phahonyothin Wang Noi",
         "via": ["Saraburi Bypass"],
-        "end": "Mittraphap Road, Kaeng Khoi"
+        "end": "Mittraphap Road, Kaeng Khoi",
+        "type": "highway"
       },
       "weather": "Clear Sky",
-      "titles": {
-        "en": "Driving from Phahonyothin Road Wang Noi to Saraburi Bypass - Kaeng Khoi, Saraburi",
-        "th": "พหลโยธิน วังน้อย ไปเลี่ยงเมืองสระบุรี ถึงมิตรภาพ แก่งคอย สระบุรี",
-        "zh": "从帕荷尤停路旺诺伊到沙拉武里绕城公路 - 桐艾府沙拉武里府",
-        "ko": "파홀요틴 도로 왕노이에서 사라부리 우회도로 - 캥코이, 사라부리까지",
-        "ja": "パホンヨーティン通りワンノーイからサラブリーバイパス - ケーンコーイ、サラブリーまで",
-        "hi": "फाहोन्योथिन रोड वांग नोई से सरबुरी बाईपास - काएंग खोई, सरबुरी तक"
-      }
+      "description": "Highway drive from Wang Noi through Saraburi Bypass to Kaeng Khoi junction"
     },
     {
       "episodeNumber": "222",
       "title": "Phahonyothin Road: Bang Pa-in to Wangnoi",
       "url": "https://www.youtube.com/watch?v=M98qMx27i2s",
+      "date": "2024-11-29",
+      "time": "08:00 AM",
+      "quality": "Full HD 1080p",
       "route": {
         "road": "Phahonyothin Road",
         "start": "Bang Pa-in",
-        "end": "Wangnoi"
+        "end": "Wangnoi",
+        "type": "highway"
       },
-      "titles": {
-        "en": "Phahonyothin Road: Bang Pa-in to Wangnoi",
-        "th": "ขับรถเที่ยวไทย EP.222 | ถนนพหลโยธิน บางปะอิน-วังน้อย",
-        "zh": "泰国自驾之旅 EP.222 | 帕荷约庭路：邦巴引-旺诺",
-        "ko": "태국 드라이브 EP.222 | 파혼요틴 도로: 방파인-왕노이 구간",
-        "ja": "タイドライブスルー EP.222 | パホンヨーティン通り：バンパイン-ワンノーイ間"
-      }
+      "weather": "Clear Sky",
+      "description": "Morning drive along Phahonyothin Road from Bang Pa-in intersection to Wangnoi district"
+    },
+    {
+      "episodeNumber": "221",
+      "title": "Bangkok to Ayutthaya via Highway 347",
+      "url": "https://www.youtube.com/watch?v=sample221",
+      "date": "2024-11-28",
+      "time": "07:30 AM",
+      "quality": "Full HD 1080p",
+      "route": {
+        "road": "Highway 347",
+        "start": "Bangkok",
+        "end": "Ayutthaya",
+        "type": "scenic"
+      },
+      "weather": "Partly Cloudy",
+      "pointsOfInterest": [
+        "Bangkok outskirts scenery",
+        "Rural Thailand views",
+        "Ayutthaya approach",
+        "Historical park vicinity"
+      ],
+      "description": "Scenic alternative route from Bangkok to Ayutthaya via the less traveled Highway 347"
     }
   ],
   "metadata": {
     "lastUpdated": "2024-11-30",
-    "totalEpisodes": 3,
-    "availableLanguages": ["en", "th", "zh", "ko", "ja", "hi"],
+    "totalEpisodes": 4,
     "videoQuality": "Full HD 1080p",
     "regions": [
       "Saraburi",
       "Nakhon Ratchasima",
       "Bang Pa-in",
       "Wangnoi",
-      "Kaeng Khoi"
+      "Kaeng Khoi",
+      "Bangkok",
+      "Ayutthaya"
     ]
   }
 }
