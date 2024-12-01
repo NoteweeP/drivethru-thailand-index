@@ -1,0 +1,79 @@
+{
+  "episodeNumber": "221",
+  "title": "Bangkok to Ayutthaya via Highway 347",
+  "url": "https://www.youtube.com/watch?v=sample221",
+  "date": "2024-11-28",
+  "time": "07:30 AM",
+  "quality": "Full HD 1080p",
+  "route": {
+    "road": "Highway 347",
+    "start": "Bangkok",
+    "end": "Ayutthaya",
+    "type": "scenic",
+    "distance": "76 km",
+    "estimatedTime": "1 hour 30 minutes",
+    "roadCondition": "Good",
+    "trafficLevel": "Light to moderate",
+    "waypoints": [
+      {
+        "name": "Bangkok Starting Point",
+        "type": "start",
+        "timestamp": "00:00"
+      },
+      {
+        "name": "Nonthaburi Province Border",
+        "type": "checkpoint",
+        "timestamp": "00:15"
+      },
+      {
+        "name": "Pathum Thani Province Border",
+        "type": "checkpoint",
+        "timestamp": "00:45"
+      },
+      {
+        "name": "Ayutthaya Historical Park Area",
+        "type": "destination",
+        "timestamp": "01:30"
+      }
+    ]
+  },
+  "weather": {
+    "condition": "Partly Cloudy",
+    "temperature": "28°C",
+    "humidity": "65%",
+    "visibility": "Good"
+  },
+  "pointsOfInterest": [
+    "Bangkok outskirts scenery",
+    "Rural Thailand views",
+    "Ayutthaya approach",
+    "Historical park vicinity"
+  ],
+  "description": "Scenic alternative route from Bangkok to Ayutthaya via the less traveled Highway 347",
+  "additionalInfo": {
+    "roadFeatures": [
+      "Wide 4-lane highway",
+      "Good road markings",
+      "Regular rest stops",
+      "Moderate truck traffic"
+    ],
+    "scenicHighlights": [
+      "Rice fields",
+      "Local markets",
+      "Temple views",
+      "Rural communities"
+    ],
+    "travelTips": [
+      "Best time to travel: Early morning to avoid traffic",
+      "Multiple gas stations available along the route",
+      "Several local restaurants for authentic Thai food",
+      "Photography spots marked with road signs"
+    ]
+  },
+  "technicalDetails": {
+    "camera": "4K Dashcam",
+    "videoFormat": "H.264",
+    "audioQuality": "Stereo",
+    "stabilization": "Electronic Image Stabilization"
+  }
+}
