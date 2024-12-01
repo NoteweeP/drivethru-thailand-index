@@ -1,0 +1,24 @@
+{
+  "episodes": [
+    {
+      "title": "Bangkok to Chonburi: Coastal Drive",
+      "description": "A scenic drive from Bangkok to Chonburi province, exploring the eastern seaboard route.",
+      "date": "2024-01-15",
+      "url": "https://youtube.com/watch?v=example1",
+      "province": "Chonburi",
+      "route": "Bangkok-Chonburi",
+      "duration": "45:30",
+      "highlights": ["Bangsan Beach", "Sriracha Tiger Zoo", "Khao Sam Muk Viewpoint"]
+    },
+    {
+      "title": "Exploring Ayutthaya's Ancient Routes",
+      "description": "Driving through the historic city of Ayutthaya, visiting ancient temples and ruins.",
+      "date": "2024-02-01",
+      "url": "https://youtube.com/watch?v=example2",
+      "province": "Ayutthaya",
+      "route": "Ayutthaya Historical Park Circuit",
+      "duration": "38:15",
+      "highlights": ["Wat Mahathat", "Wat Phra Si Sanphet", "Ayutthaya Night Market"]
+    }
+  ]
+}
