@@ -1,0 +1,52 @@
+{
+  "episodeNumber": "221",
+  "title": "Bangkok to Bang Pa-in Expressway Drive",
+  "url": "https://youtu.be/K6CYzVHe80Y",
+  "date": "2024-11-29",
+  "time": "08:30 AM",
+  "quality": "Full HD 1080p",
+  "route": {
+    "start": "Bangkok (Bang Sue)",
+    "via": ["Don Mueang Tollway", "Bangpa-in Expressway"],
+    "end": "Bang Pa-in, Ayutthaya",
+    "type": "highway",
+    "distance": "76 km"
+  },
+  "weather": "Clear sky, good visibility",
+  "pointsOfInterest": [
+    "Don Mueang International Airport view",
+    "Rangsit area",
+    "Elevated expressway sections",
+    "Bang Pa-in Industrial Estate",
+    "Bang Pa-in Junction"
+  ],
+  "description": "A smooth expressway drive from Bangkok's Bang Sue area to Bang Pa-in, Ayutthaya, showcasing the main northern corridor out of Bangkok. The route passes by Don Mueang International Airport and through developing suburban areas.",
+  "landmarks": [
+    {
+      "name": "Don Mueang International Airport",
+      "timestamp": "10:15",
+      "description": "Second major international airport of Bangkok"
+    },
+    {
+      "name": "Rangsit Area",
+      "timestamp": "15:30",
+      "description": "Major suburban educational and commercial district"
+    },
+    {
+      "name": "Bang Pa-in Industrial Estate",
+      "timestamp": "45:20",
+      "description": "One of Thailand's major industrial zones"
+    }
+  ],
+  "traffic": "Light to moderate",
+  "roadConditions": "Excellent",
+  "tags": [
+    "expressway",
+    "Bangkok",
+    "Ayutthaya",
+    "Bang Pa-in",
+    "Don Mueang",
+    "industrial",
+    "suburban"
+  ]
+}
