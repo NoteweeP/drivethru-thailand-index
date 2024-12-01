@@ -181,8 +181,8 @@ const provinces = {
 
     getVideoData: async function() {
         try {
-            // Using relative path and catching 404s
-            const response = await fetch('../episodes/index.json');
+            // Use the correct path for GitHub Pages
+            const response = await fetch('/drivethru-thailand-index/episodes/index.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
