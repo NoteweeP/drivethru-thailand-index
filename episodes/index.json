@@ -1,0 +1,28 @@
+{
+  "episodes": [
+    {
+      "id": "EP224",
+      "title": "ขับรถเที่ยวเขาใหญ่ EP224",
+      "description": "เส้นทางขับรถจากกรุงเทพ สู่เขาใหญ่ ผ่านถนนมิตรภาพ",
+      "url": "https://youtu.be/VIDEO_ID_224",
+      "thumbnail": "episodes/EP224/thumbnail.jpg",
+      "date": "2024-01-15"
+    },
+    {
+      "id": "EP223",
+      "title": "เส้นทางมอเตอร์เวย์ M6 EP223",
+      "description": "มอเตอร์เวย์ M6 บางปะอิน-นครราชสีมา เส้นทางใหม่",
+      "url": "https://youtu.be/VIDEO_ID_223",
+      "thumbnail": "episodes/EP223/thumbnail.jpg",
+      "date": "2024-01-01"
+    },
+    {
+      "id": "EP222",
+      "title": "ขับรถเที่ยวพัทยา EP222",
+      "description": "เส้นทางขับรถจากกรุงเทพ สู่พัทยา ผ่านมอเตอร์เวย์",
+      "url": "https://youtu.be/VIDEO_ID_222",
+      "thumbnail": "episodes/EP222/thumbnail.jpg",
+      "date": "2023-12-15"
+    }
+  ]
+}
