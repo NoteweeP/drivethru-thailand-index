@@ -4,9 +4,9 @@ A comprehensive index of driving routes across Thailand, documenting various roa
 
 ## Latest Episode
 
-Link: https://youtu.be/ISqxo-O7DNA
-### EP.223 - Phahonyothin Wang Noi to Saraburi
-- Route: Phahonyothin Road (Wang Noi) → Saraburi Bypass → Mittraphap Road (Kaeng Khoi)
+Link: [To be updated]
+### EP.224 - Muak Lek to Pak Chong Scenic Route
+- Route: Muak Lek → Klang Dong → Pak Chong
 - Date: November 30, 2024
 - Quality: Full HD 1080p
 
