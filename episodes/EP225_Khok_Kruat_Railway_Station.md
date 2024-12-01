@@ -1,6 +1,8 @@
 # EP225: Khok Kruat Railway Station
 
 Recorded on December 1, 2024
+Link: https://youtu.be/rQWHCYvsCDg
+
 
 ## Location
 - **Station**: Khok Kruat Railway Station (สถานีรถไฟโคกกรวด)
