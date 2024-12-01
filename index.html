@@ -65,13 +65,17 @@
         <!-- Latest Episodes -->
         <section id="episodes" class="mb-12">
             <h3 class="text-2xl font-bold mb-6">Latest Episodes</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="episodes-grid"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="episodes-grid">
+                <!-- Episodes will be populated dynamically -->
+            </div>
         </section>
 
         <!-- Recent Shorts -->
         <section id="shorts" class="mb-12">
             <h3 class="text-2xl font-bold mb-6">Recent Shorts</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="shorts-grid"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="shorts-grid">
+                <!-- Shorts will be populated dynamically -->
+            </div>
         </section>
 
         <!-- Provinces -->
@@ -82,7 +86,28 @@
             </div>
         </section>
 
-        <!-- Province Templates (Hidden) -->
+        <!-- Templates -->
+        <!-- Video Card Template (Updated with YouTube thumbnail support) -->
+        <template id="video-card-template">
+            <div class="video-card bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+                <a href="#" class="block relative">
+                    <div class="aspect-w-16 aspect-h-9 relative">
+                        <img src="" alt="" class="object-cover w-full h-full">
+                        <!-- Quality badge -->
+                        <div class="absolute top-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-sm quality-badge"></div>
+                        <!-- Episode number badge -->
+                        <div class="absolute top-2 left-2 bg-blue-600 text-white px-2 py-1 rounded text-sm episode-number"></div>
+                    </div>
+                    <div class="p-4">
+                        <h5 class="font-medium text-gray-900 truncate video-title"></h5>
+                        <p class="text-sm text-gray-500 mt-1 video-date"></p>
+                        <p class="text-sm text-gray-600 mt-1 video-weather"></p>
+                    </div>
+                </a>
+            </div>
+        </template>
+
+        <!-- Province Section Template -->
         <template id="province-section-template">
             <div class="province-section bg-white rounded-lg shadow-lg p-6">
                 <div class="flex items-center justify-between mb-6">
@@ -91,21 +116,6 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 videos-grid">
                 </div>
-            </div>
-        </template>
-
-        <template id="video-card-template">
-            <div class="video-card bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
-                <a href="#" class="block">
-                    <div class="aspect-w-16 aspect-h-9 bg-gray-200">
-                        <img src="" alt="" class="object-cover w-full h-full">
-                    </div>
-                    <div class="p-4">
-                        <h5 class="font-medium text-gray-900 truncate"></h5>
-                        <p class="text-sm text-gray-500 mt-1"></p>
-                        <p class="text-sm text-gray-600 mt-1"></p>
-                    </div>
-                </a>
             </div>
         </template>
 
@@ -158,5 +168,19 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Function to get YouTube video ID from URL
+        function getYouTubeVideoId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
+        // Function to get YouTube thumbnail URL
+        function getYouTubeThumbnail(videoId) {
+            return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+        }
+    </script>
 </body>
 </html>
