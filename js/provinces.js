@@ -1,1 +1,42 @@
-const provinces={initializeProvinces:async function(){const e=document.getElementById("provinces-grid");if(!e)return;const t={},n=await this.getVideoData();n.forEach(e=>{e.province&&(t[e.province]||(t[e.province]=[]),t[e.province].push(e))}),Object.keys(t).sort().forEach(n=>{const i=t[n],o=this.createProvinceSection(n,i);e.appendChild(o)});const i=document.getElementById("province-count");i&&(i.textContent=Object.keys(t).length)},createProvinceSection:function(e,t){const n=document.createElement("div");n.className="province-section bg-white rounded-lg shadow-lg p-6";const i=document.createElement("div");i.className="flex items-center justify-between mb-4",i.innerHTML=`<h4 class="text-xl font-bold text-gray-800">${e}</h4><span class="text-sm text-gray-500">${t.length} videos</span>`;const o=document.createElement("div");return o.className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4",t.forEach(e=>{const t=this.createVideoCard(e);o.appendChild(t)}),n.appendChild(i),n.appendChild(o),n},createVideoCard:function(e){const t=document.createElement("div");return t.className="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200",t.innerHTML=`<a href="${e.url}" target="_blank" class="block"><div class="aspect-w-16 aspect-h-9 bg-gray-200"><img src="${e.thumbnail}" alt="${e.title}" class="object-cover w-full h-full"></div><div class="p-4"><h5 class="font-medium text-gray-900 truncate">${e.title}</h5><p class="text-sm text-gray-500 mt-1">${e.date}</p></div></a>`,t},getVideoData:async function(){return[]}};document.addEventListener("DOMContentLoaded",()=>{provinces.initializeProvinces()});
+// Basic provinces module
+const provinces = {
+    init: function() {
+        console.log('Provinces module initialized');
+        this.initializeProvinces();
+    },
+    
+    initializeProvinces: async function() {
+        const provincesGrid = document.getElementById('provinces-grid');
+        if (!provincesGrid) return;
+        
+        const videos = await this.getVideoData();
+        const provinces = this.groupByProvince(videos);
+        this.renderProvinces(provinces);
+    },
+
+    groupByProvince: function(videos) {
+        return videos.reduce((acc, video) => {
+            if (video.province) {
+                if (!acc[video.province]) {
+                    acc[video.province] = [];
+                }
+                acc[video.province].push(video);
+            }
+            return acc;
+        }, {});
+    },
+
+    getVideoData: async function() {
+        try {
+            const response = await fetch('data/videos.json');
+            return await response.json();
+        } catch (error) {
+            console.error('Error loading video data:', error);
+            return [];
+        }
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    provinces.init();
+});
