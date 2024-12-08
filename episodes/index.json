@@ -1,8 +1,40 @@
 {
   "episodes": [
     {
+      "episodeNumber": "226",
+      "title": "Ladprao to Siriraj Hospital Route",
+      "date": "2024-12-08",
+      "quality": "Full HD 1080p",
+      "route": {
+        "start": "Ladprao",
+        "via": [
+          "Ratchada",
+          "Prachanukhun Bridge",
+          "Wong Sawang",
+          "Rama VII Bridge",
+          "Charansanitwong",
+          "Arun Amarin"
+        ],
+        "end": "Siriraj Hospital",
+        "type": "urban"
+      },
+      "province": "Bangkok",
+      "weather": "Clear",
+      "description": "A practical urban route guide from Ladprao to Siriraj Hospital through major Bangkok thoroughfares",
+      "pointsOfInterest": [
+        "Ladprao",
+        "Ratchada Road",
+        "Prachanukhun Bridge",
+        "Wong Sawang",
+        "Rama VII Bridge",
+        "Charansanitwong Road",
+        "Arun Amarin Road",
+        "Siriraj Hospital"
+      ]
+    },
+    {
       "episodeNumber": "225",
-      "url":"https://youtu.be/rQWHCYvsCDg",
+      "url": "https://youtu.be/rQWHCYvsCDg",
       "title": "Khok Kruat Railway Station",
       "date": "2024-12-01",
       "quality": "4K",
@@ -19,42 +51,6 @@
         "Well-preserved architectural details",
         "Beautiful station surroundings"
       ]
-    },
-    {
-      "episodeNumber": "220",
-      "title": "Driving Through Dense Fog in Pak Chong | Temperature 23°C",
-      "url": "https://youtu.be/oWZcgK4-Ui0",
-      "date": "2024-11-16",
-      "quality": "4K",
-      "route": {
-        "start": "Pak Chong",
-        "end": "Khao Yai",
-        "type": "mountain"
-      },
-      "province": "Nakhon Ratchasima",
-      "weather": "Dense fog, Temperature 23°C",
-      "description": "Saturday morning drive through dense fog on the way up to Khao Yai, featuring limited visibility conditions requiring careful driving",
-      "pointsOfInterest": [
-        "Dense fog conditions",
-        "Khao Yai mountain road",
-        "Cool morning temperature"
-      ]
-    },
-    {
-      "episodeNumber": "221",
-      "title": "Morning Drive in Bangkok | Ladprao Road-Expressway",
-      "url": "https://youtu.be/IxzzL8Drbwc",
-      "date": "2024-11-30",
-      "quality": "Full HD 1080p",
-      "route": {
-        "start": "Ladprao Road",
-        "via": ["Expressway"],
-        "end": "Expressway toll stations",
-        "type": "urban"
-      },
-      "province": "Bangkok",
-      "weather": "Morning conditions",
-      "description": "A morning drive through Bangkok, featuring Ladprao Road and expressway routes with toll payment stations"
     },
     {
       "episodeNumber": "224",
@@ -79,60 +75,13 @@
         "Pak Chong entrance"
       ],
       "description": "A scenic drive through mountainous terrain, offering beautiful views of the Thai countryside"
-    },
-    {
-      "episodeNumber": "223",
-      "title": "Phahonyothin Road Wang Noi to Saraburi Bypass",
-      "url": "https://youtu.be/ISqxo-O7DNA",
-      "date": "2024-11-30",
-      "time": "09:00 AM",
-      "quality": "Full HD 1080p",
-      "route": {
-        "start": "Phahonyothin Wang Noi",
-        "via": ["Saraburi Bypass"],
-        "end": "Mittraphap Road, Kaeng Khoi",
-        "type": "highway"
-      },
-      "provinces": ["Ayutthaya", "Saraburi"],
-      "weather": "Clear Sky",
-      "description": "A drive along the major highway route connecting Bangkok's outer ring to Saraburi province"
-    },
-    {
-      "episodeNumber": "222",
-      "title": "Phahonyothin Road: Bang Pa-in to Wangnoi",
-      "url": "https://www.youtube.com/watch?v=M98qMx27i2s",
-      "date": "2024-11-30",
-      "time": "08:30 AM",
-      "quality": "Full HD 1080p",
-      "route": {
-        "start": "Bang Pa-in",
-        "end": "Wangnoi",
-        "road": "Phahonyothin Road",
-        "type": "highway"
-      },
-      "province": "Ayutthaya",
-      "weather": "Clear Sky",
-      "description": "Journey through the industrial corridor of Ayutthaya province"
     }
   ],
   "metadata": {
-    "lastUpdated": "2024-12-01",
-    "totalEpisodes": 6,
-    "videoQuality": [
-      "4K",
-      "Full HD 1080p"
-    ],
-    "regions": [
-      "Bangkok",
-      "Ayutthaya",
-      "Saraburi",
-      "Nakhon Ratchasima"
-    ],
-    "provinces": [
-      "Bangkok",
-      "Ayutthaya",
-      "Saraburi",
-      "Nakhon Ratchasima"
-    ]
+    "lastUpdated": "2024-12-08",
+    "totalEpisodes": 7,
+    "videoQuality": ["4K", "Full HD 1080p"],
+    "regions": ["Bangkok", "Nakhon Ratchasima", "Saraburi"],
+    "provinces": ["Bangkok", "Nakhon Ratchasima", "Saraburi"]
   }
 }
