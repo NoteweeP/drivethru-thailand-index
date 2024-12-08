@@ -4,6 +4,12 @@ A comprehensive index of driving routes across Thailand, documenting various roa
 
 ## Latest Episodes
 
+### EP.226 - Ladprao to Siriraj Hospital Route
+- Route: Ladprao → Ratchada → Prachanukhun Bridge → Wong Sawang → Rama VII Bridge → Charansanitwong → Arun Amarin
+- Date: December 8, 2024
+- Quality: Full HD 1080p
+- Feature: Urban route guide to Siriraj Hospital
+
 ### EP.225 - Khok Kruat Railway Station
 - Location: Khok Kruat Railway Station, Nakhon Ratchasima
 - Date: December 1, 2024
@@ -22,13 +28,6 @@ Link: https://youtu.be/ISqxo-O7DNA
 - Date: November 30, 2024
 - Quality: Full HD 1080p
 
-### Shorts - M6 Motorway Pak Chong to Korat
-Link: https://youtube.com/shorts/bFpaGxbqFOU
-- Route: Pak Chong → Korat (Nakhon Ratchasima)
-- Date: November 2024
-- Type: Motorway
-- Format: Short Video
-
 ## Features
 - Multilingual support (Thai, English, Chinese, Korean, Japanese, Hindi)
 - Detailed route information
@@ -44,7 +43,7 @@ Link: https://youtube.com/shorts/bFpaGxbqFOU
 #DriveThruThailand #ThailandRoadTrip #DashcamThailand #ThailandTravel #ThailandMotorway
 
 ## Navigation
-For the complete index of all routes and episodes, please see [main.md](main.md)
+For the complete index of all routes and episodes, please see [episodes/index.json](episodes/index.json)
 
 ## Contributing
 Feel free to suggest improvements or report issues through GitHub issues.
